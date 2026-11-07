@@ -1,11 +1,11 @@
 {
-    "timestamp": "2026-11-07 05:59:16 UTC",
+    "timestamp": "2026-11-07 06:08:32 UTC",
     "total_matches": 1,
     "matches": [
         {
             "source_url": "https://www.cricbuzz.com/live-cricket-scores/162797/mlrw-vs-adsw-13th-match-womens-big-bash-league-2026",
             "score_summary": {
-                "current_score": "Live Match (Score syncing...)"
+                "current_score": "Live Match Running"
             },
             "latest_commentary": {
                 "ball_event": "Match in progress..."
