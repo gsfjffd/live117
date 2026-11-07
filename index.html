@@ -6,13 +6,16 @@
     <title>Live Cricket Match Dashboard</title>
     <style>
         body { font-family: Arial, sans-serif; background: #f4f7f6; margin: 0; padding: 20px; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .container { max-width: 850px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         h1 { color: #333; text-align: center; }
         .timestamp { background: #e2f0d9; padding: 8px; border-left: 5px solid #548235; margin-bottom: 20px; font-size: 14px; }
-        .match-card { background: #fafafa; border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 6px; }
-        .match-card h3 { margin-top: 0; color: #1f4e78; }
-        .score { font-size: 20px; font-weight: bold; color: #d9534f; margin: 5px 0; }
-        .commentary { font-style: italic; color: #555; }
+        .match-card { background: #fafafa; border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 6px; }
+        .match-card h3 { margin-top: 0; color: #1f4e78; font-size: 15px; word-break: break-all; }
+        .score { font-size: 22px; font-weight: bold; color: #d9534f; margin: 8px 0; background: #fff; padding: 10px; border-radius: 4px; border: 1px dashed #d9534f; }
+        .commentary-box { background: #fff; border: 1px solid #e0e0e0; padding: 10px; border-radius: 4px; margin-top: 10px; }
+        .commentary-title { font-weight: bold; color: #333; font-size: 13px; margin-bottom: 5px; border-bottom: 1px solid #eee; padding-bottom: 3px; }
+        .comm-item { font-size: 13px; color: #444; padding: 4px 0; border-bottom: 1px dashed #f0f0f0; }
+        .comm-item:last-child { border-bottom: none; }
     </style>
 </head>
 <body>
@@ -44,13 +47,25 @@
             }
 
             let htmlContent = "";
-            // Loop through all matches dynamically
             for (const match of data.matches) {
+                // Ball events array ko list items mein convert karna
+                let commHtml = "";
+                if (Array.isArray(match.latest_commentary.ball_event)) {
+                    match.latest_commentary.ball_event.forEach(event => {
+                        commHtml += `<div class="comm-item">🔹 ${event}</div>`;
+                    });
+                } else {
+                    commHtml += `<div class="comm-item">${match.latest_commentary.ball_event}</div>`;
+                }
+
                 htmlContent += `
                     <div class="match-card">
                         <h3>Match Link: <a href="${match.source_url}" target="_blank">${match.source_url}</a></h3>
-                        <div class="score">Score: ${match.score_summary.current_score}</div>
-                        <div class="commentary">Details: ${match.latest_commentary.ball_event}</div>
+                        <div class="score">📊 Score & Overs: ${match.score_summary.current_score}</div>
+                        <div class="commentary-box">
+                            <div class="commentary-title">📌 Recent Ball-by-Ball / Match Updates:</div>
+                            ${commHtml}
+                        </div>
                     </div>
                 `;
             }
