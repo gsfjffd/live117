@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Cricket Match Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f7f6; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; text-align: center; }
+        .timestamp { background: #e2f0d9; padding: 8px; border-left: 5px solid #548235; margin-bottom: 20px; font-size: 14px; }
+        .match-card { background: #fafafa; border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 6px; }
+        .match-card h3 { margin-top: 0; color: #1f4e78; }
+        .score { font-size: 22px; font-weight: bold; color: #d9534f; margin: 5px 0; }
+        .commentary { font-style: italic; color: #555; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🏏 Live Cricket Scraper Dashboard</h1>
+    <div id="timestamp-box" class="timestamp">Status: Connecting to GitHub data...</div>
+
+    <div id="matches-container">
+        <p>Loading match data...</p>
+    </div>
+</div>
+
+<script>
+    async function fetchLiveData() {
+        const container = document.getElementById('matches-container');
+        const timeBox = document.getElementById('timestamp-box');
+        
+        try {
+            const response = await fetch('live_data.json?t=' + new Date().getTime());
+            if (!response.ok) throw new Error("live_data.json not found yet. GitHub action will create it shortly.");
+            
+            const data = await response.json();
+            timeBox.innerHTML = `<strong>Last Updated (UTC):</strong> ${data.timestamp || 'Just now'}`;
+
+            if (!data.matches || data.matches.length === 0) {
+                container.innerHTML = "<p>No active matches found right now.</p>";
+                return;
+            }
+
+            let htmlContent = "";
+            for (const match of data.matches) {
+                htmlContent += `
+                    <div class="match-card">
+                        <h3>Match URL: <a href="${match.source_url}" target="_blank">${match.source_url}</a></h3>
+                        <div class="score">Score: ${match.score_summary.current_score}</div>
+                        <div class="commentary">Latest: ${match.latest_commentary.ball_event}</div>
+                    </div>
+                `;
+            }
+            container.innerHTML = htmlContent;
+        } catch (error) {
+            container.innerHTML = `<p style="color: #c00;">${error.message}</p>`;
+        }
+    }
+
+    fetchLiveData();
+    setInterval(fetchLiveData, 10000);
+</script>
+
+</body>
+</html>
