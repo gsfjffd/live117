@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-07 11:07:01 UTC",
+    "timestamp": "2026-11-07 11:41:21 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -30,11 +30,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "Live Match Running"
+                "current_score": "3rd Multi Day, Day 1, Bert Sutcliffe Oval"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "Request Timeout"
+                    "6th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
+                    "Day 3 - Session 3: WI trail by 23 runs",
+                    "by 4 wickets",
+                    "Sydney Sixers Women",
+                    "5th Youth ODI, U19 Asia Cup 2026"
                 ]
             }
         }
