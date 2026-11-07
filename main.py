@@ -11,7 +11,6 @@ OUTPUT_FILE = "live_data.json"
 
 def scrape_match_data(source_url):
     with sync_playwright() as p:
-        # Cricbuzz ke anti-bot block ko bypass karne ke liye arguments
         browser = p.chromium.launch(
             headless=True,
             args=[
@@ -29,30 +28,37 @@ def scrape_match_data(source_url):
         try:
             print(f"Fetching Cricbuzz URL: {source_url}")
             page.goto(source_url, timeout=40000, wait_until="domcontentloaded")
-            page.wait_for_timeout(6000) # Score load hone ke liye thoda wait karein
+            page.wait_for_timeout(5000)
             
-            # Poore page ka text nikalna
+            current_score = None
+            
+            # 1. Direct Cricbuzz element target karo
+            try:
+                score_elem = page.locator(".cb-min-st-rw, .cb-scrd-hdr-rw, .cb-min-score").first
+                if score_elem.count() > 0:
+                    current_score = score_elem.inner_text().strip()
+            except Exception:
+                pass
+
             page_text = page.evaluate("() => document.body.innerText")
-            
-            if not page_text or len(page_text) < 100:
-                print(f"Blocked or empty page for {source_url}")
-                browser.close()
-                return None
 
-            # Score dhundhne ke liye smart pattern matching (Regex)
-            score_match = re.search(r'(\d+/\d+)\s*\((\d+(?:\.\d+)?)\s*ov\)', page_text)
-            if score_match:
-                current_score = f"{score_match.group(1)} ({score_match.group(2)} ov)"
-            else:
-                current_score = "Live Match (Score syncing...)"
+            # 2. Agar element nahi mila toh flexible regex lagao
+            if not current_score or len(current_score) < 3:
+                # Matches patterns like 125/4 (15.2) or similar score lines
+                score_matches = re.findall(r'(\d+/\d+\s*\([^)]+\))', page_text)
+                if score_matches:
+                    current_score = score_matches[0]
+                else:
+                    num_matches = re.findall(r'\b\d{1,3}/\d{1,2}\b', page_text)
+                    current_score = num_matches[0] if num_matches else "Live Match Running"
 
-            # Commentary ya latest event nikalna
+            # 3. Commentary / Latest event extract karo
             lines = [line.strip() for line in page_text.split('\n') if line.strip()]
             ball_event = "Match in progress..."
-            for i, line in enumerate(lines):
-                if "ov" in line.lower() or "runs" in line.lower() or "four" in line.lower() or "six" in line.lower() or "out" in line.lower():
-                    if i + 1 < len(lines):
-                        ball_event = lines[i+1]
+            for line in lines:
+                if any(kw in line.lower() for kw in ["four", "six", "wicket", "out", "runs", "ov", "to", "c & b"]):
+                    if len(line) > 8 and len(line) < 140:
+                        ball_event = line
                         break
 
             browser.close()
@@ -62,19 +68,19 @@ def scrape_match_data(source_url):
                 "latest_commentary": {"ball_event": ball_event}
             }
         except Exception as e:
-            print(f"Scraping error for {source_url}: {e}")
+            print(f"Scraping error: {e}")
             browser.close()
             return None
 
 def run_pipeline():
-    print("--- Cricbuzz Scraper Pipeline Started ---")
+    print("--- Pipeline Started ---")
     matches_data = []
 
     for url in MANUAL_TARGET_URLS:
         data = scrape_match_data(url)
         if data:
             matches_data.append(data)
-        time.sleep(random.uniform(2.0, 4.0))
+        time.sleep(2)
 
     payload = {
         "timestamp": datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC'),
@@ -82,9 +88,9 @@ def run_pipeline():
         "matches": matches_data
     }
 
-    with open(OUTPUT_FILE, "w") as f:
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=4)
-    print("Data successfully saved to live_data.json")
+    print("Data saved successfully.")
 
 if __name__ == "__main__":
     run_pipeline()
