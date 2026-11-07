@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import random
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 from urls_config import MANUAL_TARGET_URLS
@@ -15,37 +16,31 @@ def scrape_match_data(source_url):
         )
         page = browser.new_page()
         try:
-            print(f"Opening URL: {source_url}")
+            print(f"Scraping URL: {source_url}")
             page.goto(source_url, timeout=30000)
-            page.wait_for_timeout(5000)
+            page.wait_for_timeout(4000)
             
-            # Page ka title aur body text nikalna
-            page_title = page.title()
+            # Page ka text nikalna
             page_text = page.evaluate("() => document.body.innerText")
+            lines = [l.strip() for l in page_text.split('\n') if l.strip()]
             
-            print(f"Page Title: {page_title}")
-            
-            # Agar Cloudflare ya Access Denied hai
-            if "Access Denied" in page_text or "Cloudflare" in page_text or "Blocked" in page_title:
-                score = "Blocked by Cricbuzz Security!"
-                commentary = "GitHub Server IP is blocked by Cricbuzz."
-            else:
-                score = f"Loaded Title: {page_title[:30]}"
-                commentary = page_text[:100].replace('\n', ' ')
+            # Sample parsing logic (Aap apne target site ke hisab se text utha sakte hain)
+            current_score = lines[0] if len(lines) > 0 else "Score not found"
+            ball_event = lines[1] if len(lines) > 1 else "Match live..."
 
             browser.close()
             return {
                 "source_url": source_url,
-                "score_summary": {"current_score": score},
-                "latest_commentary": {"ball_event": commentary}
+                "score_summary": {"current_score": current_score},
+                "latest_commentary": {"ball_event": ball_event}
             }
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"Error scraping {source_url}: {e}")
             browser.close()
             return {
                 "source_url": source_url,
-                "score_summary": {"current_score": "Connection Failed"},
-                "latest_commentary": {"ball_event": str(e)[:100]}
+                "score_summary": {"current_score": "Error fetching score"},
+                "latest_commentary": {"ball_event": str(e)[:80]}
             }
 
 def run_pipeline():
@@ -54,6 +49,7 @@ def run_pipeline():
         data = scrape_match_data(url)
         if data:
             matches_data.append(data)
+        time.sleep(random.uniform(1.0, 2.0))
 
     payload = {
         "timestamp": datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC'),
@@ -63,7 +59,7 @@ def run_pipeline():
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=4)
-    print("Saved to JSON.")
+    print(f"Successfully saved {len(matches_data)} matches to live_data.json")
 
 if __name__ == "__main__":
     run_pipeline()
