@@ -18,45 +18,37 @@ def scrape_match_data(source_url):
         page = browser.new_page()
         try:
             print(f"Scraping URL: {source_url}")
-            page.goto(source_url, timeout=40000)
-            page.wait_for_timeout(7000) # SPA load hone ke liye thoda aur wait
+            page.goto(source_url, timeout=45000)
+            page.wait_for_timeout(8000) # Full dynamic content load hone ke liye
             
             page_text = page.evaluate("() => document.body.innerText")
-            lines = [l.strip() for l in page_text.split('\n') if l.strip()]
+            lines = [l.strip() for l in page_text.split('\n'] if l.strip()]
             
-            current_score = "Score updating..."
-            ball_event = "Match live in progress..."
+            current_score = "Live Match Running"
+            commentary_list = []
 
-            # 1. Smart Search: Poori page text mein score format (jaise 145/4 ya overs) dhoondhein
-            score_candidates = []
+            # 1. Score / Overs dhoondhne ke liye smart search
             for line in lines:
-                if re.search(r'\d+/\d+', line) and len(line) < 45:
-                    score_candidates.append(line)
-            
-            if score_candidates:
-                current_score = score_candidates[0]
-            else:
-                # Fallback: Agar slash wala score na mile toh match-related keywords dhoondhein
-                for line in lines:
-                    if any(w in line.lower() for w in ["run", "ov", "target", "need", "lead", "v/s"]) and len(line) < 50:
-                        current_score = line
-                        break
+                if (re.search(r'\d+/\d+', line) or "ov" in line.lower() or "target" in line.lower()) and len(line) < 50:
+                    current_score = line
+                    break
 
-            # 2. Smart Commentary Search: Latest event ya commentary dhoondhein
-            commentary_candidates = []
+            # 2. Ball-by-ball commentary lines extract karna
             for line in lines:
-                if any(w in line.lower() for w in ["four", "six", "wicket", "out", "runs", "extras", "wide", "to"]):
-                    if len(line) > 10 and len(line) < 120 and line != current_score:
-                        commentary_candidates.append(line)
-            
-            if commentary_candidates:
-                ball_event = commentary_candidates[0]
+                # Commentary mein overs (jaise 19.4, 18.2) ya cricket terms hote hain
+                if re.search(r'\b\d{1,2}\.\d\b', line) or any(term in line.lower() for term in ["four", "six", "wicket", "out", "1 run", "2 runs", "3 runs", "dot", "extras", "wide"]):
+                    if len(line) > 8 and len(line) < 150 and line not in commentary_list:
+                        commentary_list.append(line)
+
+            # Agar commentary list khali ho toh fallback messages daal dein
+            if not commentary_list:
+                commentary_list = ["Match commentary syncing from source..."]
 
             browser.close()
             return {
                 "source_url": source_url,
                 "score_summary": {"current_score": current_score},
-                "latest_commentary": {"ball_event": ball_event}
+                "latest_commentary": {"ball_event": commentary_list[:5]} # Top 5 recent commentary items
             }
         except Exception as e:
             print(f"Error scraping {source_url}: {e}")
@@ -64,7 +56,7 @@ def scrape_match_data(source_url):
             return {
                 "source_url": source_url,
                 "score_summary": {"current_score": "Error fetching score"},
-                "latest_commentary": {"ball_event": str(e)[:80]}
+                "latest_commentary": {"ball_event": [str(e)[:80]]}
             }
 
 def run_pipeline():
@@ -83,7 +75,7 @@ def run_pipeline():
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=4)
-    print(f"Successfully saved {len(matches_data)} matches to live_data.json")
+    print(f"Successfully saved {len(matches_data)} matches.")
 
 if __name__ == "__main__":
     run_pipeline()
