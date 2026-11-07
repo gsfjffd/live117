@@ -1,14 +1,32 @@
 {
-    "timestamp": "2026-11-07 06:26:40 UTC",
-    "total_matches": 1,
+    "timestamp": "2026-11-07 07:10:40 UTC",
+    "total_matches": 3,
     "matches": [
         {
-            "source_url": "https://www.cricbuzz.com/live-cricket-scores/162797/mlrw-vs-adsw-13th-match-womens-big-bash-league-2026",
+            "source_url": "https://www.fancode.com/cricket/tour/west-indies-tour-of-bangladesh-2026-19985462/matches/west-indies-vs-bangladesh-4250527/commentary",
             "score_summary": {
-                "current_score": "Blocked by Cricbuzz Security!"
+                "current_score": "Home"
             },
             "latest_commentary": {
-                "ball_event": "GitHub Server IP is blocked by Cricbuzz."
+                "ball_event": "Live Now"
+            }
+        },
+        {
+            "source_url": "https://www.cricinfo.com/live-cricket-score",
+            "score_summary": {
+                "current_score": "Access Denied"
+            },
+            "latest_commentary": {
+                "ball_event": "You don't have permission to access \"http://www.cricinfo.com/live-cricket-score\" on this server."
+            }
+        },
+        {
+            "source_url": "https://crex.com/",
+            "score_summary": {
+                "current_score": "CREX"
+            },
+            "latest_commentary": {
+                "ball_event": "Home"
             }
         }
     ]
