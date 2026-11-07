@@ -19,28 +19,26 @@ def scrape_match_data(source_url):
         try:
             print(f"Scraping URL: {source_url}")
             page.goto(source_url, timeout=45000)
-            page.wait_for_timeout(8000) # Full dynamic content load hone ke liye
+            page.wait_for_timeout(8000)
             
             page_text = page.evaluate("() => document.body.innerText")
-            lines = [l.strip() for l in page_text.split('\n'] if l.strip()]
+            lines = [l.strip() for l in page_text.split('\n') if l.strip()]
             
             current_score = "Live Match Running"
             commentary_list = []
 
-            # 1. Score / Overs dhoondhne ke liye smart search
+            # 1. Score / Overs check
             for line in lines:
                 if (re.search(r'\d+/\d+', line) or "ov" in line.lower() or "target" in line.lower()) and len(line) < 50:
                     current_score = line
                     break
 
-            # 2. Ball-by-ball commentary lines extract karna
+            # 2. Ball-by-ball commentary extraction
             for line in lines:
-                # Commentary mein overs (jaise 19.4, 18.2) ya cricket terms hote hain
                 if re.search(r'\b\d{1,2}\.\d\b', line) or any(term in line.lower() for term in ["four", "six", "wicket", "out", "1 run", "2 runs", "3 runs", "dot", "extras", "wide"]):
                     if len(line) > 8 and len(line) < 150 and line not in commentary_list:
                         commentary_list.append(line)
 
-            # Agar commentary list khali ho toh fallback messages daal dein
             if not commentary_list:
                 commentary_list = ["Match commentary syncing from source..."]
 
@@ -48,7 +46,7 @@ def scrape_match_data(source_url):
             return {
                 "source_url": source_url,
                 "score_summary": {"current_score": current_score},
-                "latest_commentary": {"ball_event": commentary_list[:5]} # Top 5 recent commentary items
+                "latest_commentary": {"ball_event": commentary_list[:5]}
             }
         except Exception as e:
             print(f"Error scraping {source_url}: {e}")
