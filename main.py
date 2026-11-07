@@ -2,6 +2,7 @@ import os
 import json
 import time
 import random
+import re
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 from urls_config import MANUAL_TARGET_URLS
@@ -17,16 +18,39 @@ def scrape_match_data(source_url):
         page = browser.new_page()
         try:
             print(f"Scraping URL: {source_url}")
-            page.goto(source_url, timeout=30000)
-            page.wait_for_timeout(4000)
+            page.goto(source_url, timeout=40000)
+            page.wait_for_timeout(7000) # SPA load hone ke liye thoda aur wait
             
-            # Page ka text nikalna
             page_text = page.evaluate("() => document.body.innerText")
             lines = [l.strip() for l in page_text.split('\n') if l.strip()]
             
-            # Sample parsing logic (Aap apne target site ke hisab se text utha sakte hain)
-            current_score = lines[0] if len(lines) > 0 else "Score not found"
-            ball_event = lines[1] if len(lines) > 1 else "Match live..."
+            current_score = "Score updating..."
+            ball_event = "Match live in progress..."
+
+            # 1. Smart Search: Poori page text mein score format (jaise 145/4 ya overs) dhoondhein
+            score_candidates = []
+            for line in lines:
+                if re.search(r'\d+/\d+', line) and len(line) < 45:
+                    score_candidates.append(line)
+            
+            if score_candidates:
+                current_score = score_candidates[0]
+            else:
+                # Fallback: Agar slash wala score na mile toh match-related keywords dhoondhein
+                for line in lines:
+                    if any(w in line.lower() for w in ["run", "ov", "target", "need", "lead", "v/s"]) and len(line) < 50:
+                        current_score = line
+                        break
+
+            # 2. Smart Commentary Search: Latest event ya commentary dhoondhein
+            commentary_candidates = []
+            for line in lines:
+                if any(w in line.lower() for w in ["four", "six", "wicket", "out", "runs", "extras", "wide", "to"]):
+                    if len(line) > 10 and len(line) < 120 and line != current_score:
+                        commentary_candidates.append(line)
+            
+            if commentary_candidates:
+                ball_event = commentary_candidates[0]
 
             browser.close()
             return {
