@@ -1,20 +1,20 @@
 {
-    "timestamp": "2026-11-07 07:10:40 UTC",
+    "timestamp": "2026-11-07 07:15:13 UTC",
     "total_matches": 3,
     "matches": [
         {
             "source_url": "https://www.fancode.com/cricket/tour/west-indies-tour-of-bangladesh-2026-19985462/matches/west-indies-vs-bangladesh-4250527/commentary",
             "score_summary": {
-                "current_score": "Home"
+                "current_score": "356/10"
             },
             "latest_commentary": {
-                "ball_event": "Live Now"
+                "ball_event": "West Indies tour of Bangladesh, 2026"
             }
         },
         {
             "source_url": "https://www.cricinfo.com/live-cricket-score",
             "score_summary": {
-                "current_score": "Access Denied"
+                "current_score": "Score updating..."
             },
             "latest_commentary": {
                 "ball_event": "You don't have permission to access \"http://www.cricinfo.com/live-cricket-score\" on this server."
@@ -23,10 +23,10 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "CREX"
+                "current_score": "116 runs needed in 256 balls"
             },
             "latest_commentary": {
-                "ball_event": "Home"
+                "ball_event": "Top Matches"
             }
         }
     ]
