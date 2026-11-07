@@ -1,18 +1,18 @@
 {
-    "timestamp": "2026-11-07 09:51:00 UTC",
+    "timestamp": "2026-11-07 10:26:37 UTC",
     "total_matches": 3,
     "matches": [
         {
             "source_url": "https://www.fancode.com/cricket/tour/west-indies-tour-of-bangladesh-2026-19985462/matches/west-indies-vs-bangladesh-4250527/commentary",
             "score_summary": {
-                "current_score": "356/10"
+                "current_score": "4/0"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "Fuller and on middle, angling in, Towhid Hridoy tucks it to short mid-wicket.",
-                    "Hard length and on off, angling in, Towhid Hridoy blocks it out.",
-                    "Slower through the air, full and on middle, Taskin Ahmed blocks it out solidly.",
-                    "FOUR! Taskin Ahmed frees his arms now! Tossed up, full and on middle, Taskin with the full extension of the arms lofts it over mid on for a boundary.",
+                    "On a length, wide of off, Joshua Da Silva keeps it out.",
+                    "Good length, on off, Joshua Da Silva defends it out.",
+                    "Back of a length, wide of off, Brandon King leaves it all alone.",
+                    "On a length, around off, Brandon King keeps it out.",
                     "Australia tour of South Africa, 2026"
                 ]
             }
@@ -35,11 +35,11 @@
             },
             "latest_commentary": {
                 "ball_event": [
+                    "by 21 runs",
+                    "61 runs needed in 76 balls",
                     "6th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
                     "5th Youth ODI, U19 Asia Cup 2026",
-                    "by 10 wickets",
-                    "Day 3 - Session 1: IRE-A lead by 251 runs",
-                    "Garden Route Badgers"
+                    "by 10 wickets"
                 ]
             }
         }
