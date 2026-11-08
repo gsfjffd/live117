@@ -1,19 +1,16 @@
 {
-    "timestamp": "2026-11-08 05:05:09 UTC",
+    "timestamp": "2026-11-08 05:50:02 UTC",
     "total_matches": 3,
     "matches": [
         {
             "source_url": "https://www.fancode.com/cricket/tour/west-indies-tour-of-bangladesh-2026-19985462/matches/west-indies-vs-bangladesh-4250527/commentary",
             "score_summary": {
-                "current_score": "102/1"
+                "current_score": "128/2"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "Day 4: West Indies lead by 72 runs",
-                    "1 run, that is lofted away for a single.",
-                    "From around the wicket, slanting away from the off stump, on a good length. King is solid in defence.",
-                    "Loopy ball, very full, on off. Brandon squeezes it out to long off and crosses over.",
-                    "Flighted up, on off. King lunges to defend it out."
+                    "Australia tour of South Africa, 2026",
+                    "ABOUT FANCODE"
                 ]
             }
         },
@@ -31,15 +28,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "15th T20, North Sydney Oval"
+                "current_score": "3rd Multi Day, Day 2, Bert Sutcliffe Oval"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "Day 4 - Session 1: WI lead by 72 runs",
-                    "7th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
                     "8th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 2)",
                     "by 3 wickets",
-                    "by 51 runs"
+                    "7th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
+                    "by 51 runs",
+                    "Day 3 - Session 3: AFG trail by 102 runs"
                 ]
             }
         }
