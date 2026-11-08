@@ -1,17 +1,15 @@
 {
-    "timestamp": "2026-11-08 09:54:28 UTC",
+    "timestamp": "2026-11-08 10:28:02 UTC",
     "total_matches": 3,
     "matches": [
         {
             "source_url": "https://www.fancode.com/cricket/tour/west-indies-tour-of-bangladesh-2026-19985462/matches/west-indies-vs-bangladesh-4250527/commentary",
             "score_summary": {
-                "current_score": "317/3"
+                "current_score": "342/3"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "This is pushed through, flatter and shorter, on off. Kavem keeps it out from the crease.",
-                    "Offers flight, on a length, on middle. Jangoo uses his feet and flicks it wide of square leg for a single.",
-                    "Nice loop on this one, on off. Hodge reaches out in front and strokes it to long off for a run.",
+                    "Day 4: West Indies lead by 312 runs",
                     "Australia tour of South Africa, 2026",
                     "ABOUT FANCODE"
                 ]
@@ -36,10 +34,10 @@
             "latest_commentary": {
                 "ball_event": [
                     "8th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
-                    "173 runs needed in 254 balls",
                     "7th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 2)",
-                    "71 runs needed in 174 balls",
-                    "by 3 wickets"
+                    "by 6 wickets",
+                    "by 51 runs",
+                    "subscribe on YouTube!"
                 ]
             }
         }
