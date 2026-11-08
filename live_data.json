@@ -1,19 +1,19 @@
 {
-    "timestamp": "2026-11-08 04:16:49 UTC",
+    "timestamp": "2026-11-08 05:05:09 UTC",
     "total_matches": 3,
     "matches": [
         {
             "source_url": "https://www.fancode.com/cricket/tour/west-indies-tour-of-bangladesh-2026-19985462/matches/west-indies-vs-bangladesh-4250527/commentary",
             "score_summary": {
-                "current_score": "56/0"
+                "current_score": "102/1"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "Spinning back in at the pads, on a length. King nurdles it with the turn towards deep mid-wicket for one.",
-                    "This is pushed through, on the shorter side, Brandon uses the depth of the crease to whip it to mid-wicket.",
-                    "Dropped short again, on middle. Joshua turns it wide of square leg and crosses over.",
-                    "Shorter and on middle. Joshua steps out and stabs it down.",
-                    "Goes wide on the crease and gets the ball to tail back in at the sticks. King knocks it with a straight bat to mid off."
+                    "Day 4: West Indies lead by 72 runs",
+                    "1 run, that is lofted away for a single.",
+                    "From around the wicket, slanting away from the off stump, on a good length. King is solid in defence.",
+                    "Loopy ball, very full, on off. Brandon squeezes it out to long off and crosses over.",
+                    "Flighted up, on off. King lunges to defend it out."
                 ]
             }
         },
@@ -35,11 +35,11 @@
             },
             "latest_commentary": {
                 "ball_event": [
-                    "8th Youth ODI, U19 Asia Cup 2026",
+                    "Day 4 - Session 1: WI lead by 72 runs",
+                    "7th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
+                    "8th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 2)",
                     "by 3 wickets",
-                    "7th Youth ODI, U19 Asia Cup 2026",
-                    "by 51 runs",
-                    "Day 3 - Session 3: AFG trail by 102 runs"
+                    "by 51 runs"
                 ]
             }
         }
