@@ -1,16 +1,19 @@
 {
-    "timestamp": "2026-11-08 05:50:02 UTC",
+    "timestamp": "2026-11-08 06:33:25 UTC",
     "total_matches": 3,
     "matches": [
         {
             "source_url": "https://www.fancode.com/cricket/tour/west-indies-tour-of-bangladesh-2026-19985462/matches/west-indies-vs-bangladesh-4250527/commentary",
             "score_summary": {
-                "current_score": "128/2"
+                "current_score": "158/2"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "Australia tour of South Africa, 2026",
-                    "ABOUT FANCODE"
+                    "Turn and bounce for Taijul, a bit short, on off. Kevin uses the depth of the crease and defends it out.",
+                    "Slider at 77.7 kph, full and on off. Wickham defends it off the front foot.",
+                    "Stays slow, outside off, Kavem lunges across to smother the spin.",
+                    "Throws it wide on off, on a length. Hodge reaches out and angles the dab towards backward point.",
+                    "Outside off, on a good length. Hodge dabs it to deep point and retains the strike with a single."
                 ]
             }
         },
@@ -28,15 +31,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "3rd Multi Day, Day 2, Bert Sutcliffe Oval"
+                "current_score": "16th T20, North Sydney Oval"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "8th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 2)",
+                    "8th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
+                    "7th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 2)",
                     "by 3 wickets",
-                    "7th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
                     "by 51 runs",
-                    "Day 3 - Session 3: AFG trail by 102 runs"
+                    "Gurnoor Brar Breaks Zaheer Khan\u2019s 23-Year-Old Record In Style With Stunning Four-Fer"
                 ]
             }
         }
