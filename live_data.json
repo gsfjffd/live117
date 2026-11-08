@@ -1,15 +1,17 @@
 {
-    "timestamp": "2026-11-08 08:25:06 UTC",
+    "timestamp": "2026-11-08 09:13:14 UTC",
     "total_matches": 3,
     "matches": [
         {
             "source_url": "https://www.fancode.com/cricket/tour/west-indies-tour-of-bangladesh-2026-19985462/matches/west-indies-vs-bangladesh-4250527/commentary",
             "score_summary": {
-                "current_score": "257/2"
+                "current_score": "284/3"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "On middle and leg, angling in, tickled across off the back foot to mid-wicket.",
+                    "Pitched way outside leg, Hodge sweeps it to deep quare leg for a single.",
+                    "Full and dipping in and around leg. Wickham works it down to mid-wicket.",
+                    "Short on leg, Kavem rocks back and swipes it to deep mid-wicket for a single.",
                     "Australia tour of South Africa, 2026",
                     "ABOUT FANCODE"
                 ]
@@ -29,15 +31,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "16th T20, North Sydney Oval"
+                "current_score": "3rd Multi Day, Day 2, Bert Sutcliffe Oval"
             },
             "latest_commentary": {
                 "ball_event": [
                     "8th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
                     "7th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 2)",
+                    "113 runs needed in 244 balls",
                     "by 3 wickets",
-                    "by 51 runs",
-                    "Rohit Sharma Shatters Shahid Afridi's Special Six-Hitting Record vs New Zealand"
+                    "by 6 wickets"
                 ]
             }
         }
