@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-10 11:03:33 UTC",
+    "timestamp": "2026-11-10 11:51:13 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "17th T20, Bellerive Oval, Hobart"
+                "current_score": "Western Province"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "12 runs needed in 6 balls",
                     "11th Youth ODI, Al Amerat Cricket Ground (Ministry Turf 2)",
-                    "201 runs needed in 126 balls",
                     "by 9 wickets",
-                    "by 10 wickets"
+                    "by 10 wickets",
+                    "by 4 wickets",
+                    "12th Youth ODI, U19 Asia Cup 2026"
                 ]
             }
         }
