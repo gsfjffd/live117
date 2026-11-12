@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-12 07:44:29 UTC",
+    "timestamp": "2026-11-12 08:43:06 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "AAKASH\u2219 9 NOV 2026"
+                "current_score": "20th T20, Junction Oval, Melbourne"
             },
             "latest_commentary": {
                 "ball_event": [
                     "1st Semi Final Youth ODI, Al Amerat Cricket Ground (Ministry Turf 2)",
                     "2nd Semi Final Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
-                    "Sydney Sixers Women",
                     "by 8 wickets",
-                    "by 6 wickets"
+                    "by 6 wickets",
+                    "131 runs needed in 117 balls"
                 ]
             }
         }
