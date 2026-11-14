@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-14 06:15:19 UTC",
+    "timestamp": "2026-11-14 07:17:36 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "21st T20, Bellerive Oval, Hobart"
+                "current_score": "Western Province"
             },
             "latest_commentary": {
                 "ball_event": [
                     "Final Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
-                    "142 runs needed in 114 balls",
+                    "142 runs needed in 120 balls",
                     "by 7 wickets",
-                    "by 61 runs",
-                    "by 4 wickets"
+                    "by 10 wickets",
+                    "by 3 wickets"
                 ]
             }
         }
