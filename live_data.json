@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-14 11:36:56 UTC",
+    "timestamp": "2026-11-14 12:14:51 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "Western Province"
+                "current_score": "Final T20I, Entebbe Cricket Oval, Entebbe"
             },
             "latest_commentary": {
                 "ball_event": [
                     "Final Youth ODI, Al Amerat Cricket Ground (Ministry Turf 1)",
+                    "Day 2 - Session 3: AFG trail by 203 runs",
                     "South Africa",
                     "Sydney Sixers Women",
-                    "by 51 runs",
-                    "by 10 wickets"
+                    "by 51 runs"
                 ]
             }
         }
