@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-14 23:21:45 UTC",
+    "timestamp": "2026-11-14 23:54:03 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "MAYANK\u2219 13 NOV 2026"
+                "current_score": "23rd T20, North Sydney Oval"
             },
             "latest_commentary": {
                 "ball_event": [
                     "South Africa",
                     "Final Youth ODI, U19 Asia Cup 2026",
                     "by 1 wicket",
-                    "Sydney Sixers Women",
-                    "by 51 runs"
+                    "by 51 runs",
+                    "by 10 wickets"
                 ]
             }
         }
