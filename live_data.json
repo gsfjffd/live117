@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-16 06:05:27 UTC",
+    "timestamp": "2026-11-16 08:43:26 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "15th One Day, Junction Oval, Melbourne"
+                "current_score": "24th T20, Drummoyne Oval, Sydney"
             },
             "latest_commentary": {
                 "ball_event": [
+                    "73 runs needed in 27 balls",
                     "by 22 runs",
                     "by 8 wickets",
                     "by 11 runs",
-                    "by 9 wickets",
-                    "subscribe on YouTube!"
+                    "by 5 wickets"
                 ]
             }
         }
