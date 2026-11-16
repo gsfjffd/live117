@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-16 11:43:34 UTC",
+    "timestamp": "2026-11-16 14:09:00 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "ABHINAV\u2219 15 NOV 2026"
+                "current_score": "ANURAG\u2219 15 NOV 2026"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "Day 2 - Session 2: SA trail by 341 runs",
-                    "Day 4 - Session 3: AFG needs 342 runs to win",
                     "by 8 wickets",
                     "Sydney Sixers Women",
-                    "by 5 wickets"
+                    "by 5 wickets",
+                    "by 6 wickets",
+                    "by 131 runs"
                 ]
             }
         }
