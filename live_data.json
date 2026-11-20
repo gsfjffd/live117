@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-20 06:40:30 UTC",
+    "timestamp": "2026-11-20 07:55:24 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,14 +27,14 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "RITAM\u2219 18 NOV 2026"
+                "current_score": "28th T20, Adelaide Oval, Adelaide"
             },
             "latest_commentary": {
                 "ball_event": [
                     "by 8 wickets",
                     "by 9 wickets",
                     "by 6 wickets",
-                    "22 runs needed in 20 balls",
+                    "123 runs needed in 88 balls",
                     "by 3 wickets"
                 ]
             }
