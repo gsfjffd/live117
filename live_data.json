@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-21 03:34:12 UTC",
+    "timestamp": "2026-11-21 04:30:43 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "29th T20, Bellerive Oval, Hobart"
+                "current_score": "30th T20, North Sydney Oval"
             },
             "latest_commentary": {
                 "ball_event": [
+                    "Day 3 - Session 3: IND lead by 42 runs",
                     "by 8 wickets",
                     "by 7 wickets",
-                    "43 runs needed in 48 balls",
-                    "Sydney Sixers Women",
-                    "by 61 runs"
+                    "by 61 runs",
+                    "by 5 wickets"
                 ]
             }
         }
