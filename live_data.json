@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-22 10:39:15 UTC",
+    "timestamp": "2026-11-22 11:25:04 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "32nd T20, Junction Oval, Melbourne"
+                "current_score": "AKSHITA\u2219 20 NOV 2026"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "wet outfield",
-                    "132 runs needed in 102 balls",
                     "Day 4 - Session 3: NZ trail by 233 runs",
                     "by 3 wickets",
-                    "South Africa"
+                    "South Africa",
+                    "by 6 wickets",
+                    "by 43 runs"
                 ]
             }
         }
