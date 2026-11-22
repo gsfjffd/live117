@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-22 01:50:23 UTC",
+    "timestamp": "2026-11-22 02:40:01 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "SAKSHI\u2219 20 NOV 2026"
+                "current_score": "AKSHITA\u2219 20 NOV 2026"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "Day 4 - Session 2: NZ trail by 352 runs",
                     "by 3 wickets",
                     "by 4 wickets",
                     "by 8 wickets",
-                    "by 52 runs"
+                    "by 52 runs",
+                    "by 1 wicket"
                 ]
             }
         }
