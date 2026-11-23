@@ -1,15 +1,15 @@
 {
-    "timestamp": "2026-11-23 12:33:04 UTC",
+    "timestamp": "2026-11-23 13:55:25 UTC",
     "total_matches": 3,
     "matches": [
         {
             "source_url": "https://www.fancode.com/cricket/tour/west-indies-tour-of-bangladesh-2026-19985462/matches/west-indies-vs-bangladesh-4250527/commentary",
             "score_summary": {
-                "current_score": "Error fetching score"
+                "current_score": "398/6"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.fa"
+                    "ABOUT FANCODE"
                 ]
             }
         },
@@ -32,10 +32,10 @@
             "latest_commentary": {
                 "ball_event": [
                     "by 113 runs",
+                    "91 runs needed in 244 balls",
                     "by 7 wickets",
                     "by 12 runs",
-                    "by 8 wickets",
-                    "Day 2 - Session 3: NSW trail by 83 runs"
+                    "by 8 wickets"
                 ]
             }
         }
