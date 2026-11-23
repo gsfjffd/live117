@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-23 04:48:27 UTC",
+    "timestamp": "2026-11-23 05:49:02 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "SOUMYAJIT\u2219 21 NOV 2026"
+                "current_score": "KAUSHIK\u2219 21 NOV 2026"
             },
             "latest_commentary": {
                 "ball_event": [
                     "by 113 runs",
                     "South Africa",
-                    "by 6 wickets",
                     "by 12 runs",
-                    "by 8 wickets"
+                    "by 8 wickets",
+                    "by 4 wickets"
                 ]
             }
         }
