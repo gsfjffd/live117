@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-25 10:22:57 UTC",
+    "timestamp": "2026-11-25 11:22:13 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "33rd T20, Junction Oval, Melbourne"
+                "current_score": "15th First Class, Day 2, Adelaide Oval, Adelaide"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "by 8 wickets",
                     "by 6 wickets",
-                    "by 7 wickets",
                     "by 3 wickets",
-                    "Day 2 - Session 3: VIC trail by 12 runs"
+                    "by 7 wickets",
+                    "Day 2 - Session 3: VIC trail by 12 runs",
+                    "by 4 wickets"
                 ]
             }
         }
