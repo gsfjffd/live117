@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-26 06:34:09 UTC",
+    "timestamp": "2026-11-26 07:58:34 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,14 +27,14 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "34th T20, North Sydney Oval"
+                "current_score": "35th T20, North Sydney Oval"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "Sydney Sixers Women",
                     "by 3 wickets",
+                    "222 runs needed in 90 balls",
+                    "by 2 wickets",
                     "1st Youth T20, ENGW-U19 vs INDW-U19",
-                    "by 6 wickets",
                     "Day 4 - Session 2: TAS lead by 62 runs"
                 ]
             }
