@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-26 10:47:36 UTC",
+    "timestamp": "2026-11-26 11:42:01 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "35th T20, North Sydney Oval"
+                "current_score": "15th First Class, Day 3, Adelaide Oval, Adelaide"
             },
             "latest_commentary": {
                 "ball_event": [
-                    "by 3 wickets",
-                    "11 runs needed in 44 balls",
                     "by 6 wickets",
+                    "by 4 wickets",
                     "by 2 wickets",
-                    "by 8 wickets"
+                    "by 8 wickets",
+                    "1st Youth T20, ENGW-U19 vs INDW-U19"
                 ]
             }
         }
