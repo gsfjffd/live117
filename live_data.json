@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-26 03:35:22 UTC",
+    "timestamp": "2026-11-26 04:41:30 UTC",
     "total_matches": 3,
     "matches": [
         {
@@ -27,15 +27,15 @@
         {
             "source_url": "https://crex.com/",
             "score_summary": {
-                "current_score": "15th First Class, Day 3, Adelaide Oval, Adelaide"
+                "current_score": "34th T20, North Sydney Oval"
             },
             "latest_commentary": {
                 "ball_event": [
+                    "Sydney Sixers Women",
                     "by 3 wickets",
                     "by 7 wickets",
-                    "1st Youth T20, ENGW-U19 vs INDW-U19",
-                    "by 6 wickets",
-                    "subscribe on YouTube!"
+                    "182 runs needed in 93 balls",
+                    "1st Youth T20, ENGW-U19 vs INDW-U19"
                 ]
             }
         }
